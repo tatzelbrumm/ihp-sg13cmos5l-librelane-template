@@ -1,6 +1,6 @@
 # ihp-sg13cmos5l LibreLane Template
 
-A LibreLane template to implement a full chip design using the ihp-sg13g2 PDK.
+A LibreLane template to implement a full chip design using the ihp-sg13cmos5l PDK.
 
 ![IHP template render in OpenROAD GUI](ihp_chip.png)
 
@@ -48,6 +48,9 @@ make copy-final
 ```
 
 This will only work if the last run was completed without errors.
+
+> [!CAUTION]
+> The verification using `cocotb` is still WiP
 
 ## Verification and Simulation
 
