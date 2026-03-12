@@ -14,16 +14,16 @@ meta:
     #Checker.KLayoutDRC: null
 
     # Disable magic DRC
-    Magic.DRC: null
-    Checker.MagicDRC: null
+    # Magic.DRC: null
+    #Checker.MagicDRC: null
 
     # Disable KLayout antenna check
     KLayout.Antenna: null
     Checker.KLayoutAntenna: null
 
     # Disable KLayout density check
-    KLayout.Density: null
-    Checker.KLayoutDensity: null
+    #KLayout.Density: null
+    #Checker.KLayoutDensity: null
     
     # Save time
     OpenROAD.IRDropReport: null
