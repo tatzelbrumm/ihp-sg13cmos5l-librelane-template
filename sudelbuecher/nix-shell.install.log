@@ -1,0 +1,162 @@
+nix-shell 
+warning: Git tree '/home/cmaier/EDA/ihp-sg13cmos5l-librelane-template' is dirty
+unpacking 'github:librelane/librelane/75e96f70b24433b7edec62c111735f1dfc38f6c1?narHash=sha256-QZZM8qE5UHt4i0NLoTTwcVvGFMXfQY3hCRZG/mPoavg%3D' into the Git cache...
+unpacking 'github:fossi-foundation/nix-eda/f089e7f2b2937d4943e2731c16d250d91ba4783b?narHash=sha256-gYb69Nljd23/dxVFI7ckYLNJsZzLg38IcnlCSK9o6w8%3D' into the Git cache...
+unpacking 'github:numtide/devshell/255a2b1725a20d060f566e4755dbf571bbbb5f76?narHash=sha256-460jc0%2BCZfyaO8%2Bw8JNtlClB2n4ui1RbHfPTLkpwhU8%3D' into the Git cache...
+these 7 derivations will be built:
+  /nix/store/8fglhqgl3965606nhcaj7ia9wz0hpc3q-python3.13-librelane-3.0.0rc0.drv
+  /nix/store/ky6qngz6m6ak608vgasc2797gawx76nv-python3-3.13.9-env.drv
+  /nix/store/2qdp8asf7rxiqm7iwzk6j31b5f5jlvvp-devshell-env.bash.drv
+  /nix/store/h6sx47zazv8gchsnnskwg0rwv4784jgs-menu.drv
+  /nix/store/yba5jkjibsl1js51rab15p0d0pbymzh8-devshell-entrypoint.drv
+  /nix/store/b6v7i697888jz9105m0rl80z2cdxbkbv-devshell-dir.drv
+  /nix/store/yk5sz31r5jv2gnh3xm36v14b1s2ar4rh-naked-stdenv.drv
+these 24 paths will be fetched (177.49 MiB download, 745.36 MiB unpacked):
+  /nix/store/w9jm660dykns6hzrdhxmqfywnc9ail8g-cmake-4.1.2
+  /nix/store/i6xby5mxz12d130snflsimw8dvpvi90d-curl-8.17.0
+  /nix/store/2g7r19hw2g5z871hhzam6qkc9jn8gfpl-gawk-5.3.2-man
+  /nix/store/jlv0a6iyh8vb7pfyhjj93xy245xlmgh5-gnumake-4.4.1
+  /nix/store/66gca2ba1a5dd2pbwh3nc2fil96nzwb8-gnumake-4.4.1-man
+  /nix/store/5cmprhlbcc69x52j4mbjqxwai215khg2-klayout-0.30.6
+  /nix/store/m80p5vq3zj2bh0q84qdcns6f35p959q9-klayout-0.30.6-python
+  /nix/store/8ri0gk3jhzl9hzangslrr5x3kiykmbm7-magic-vlsi-8.3.618
+  /nix/store/kw3frc6fbv3zi2m9n0wv93y1nfiyjiy6-netgen-1.5.316
+  /nix/store/c4zxmi7w55jnz305yqc4407n4426zj7s-openroad-2026-02-17
+  /nix/store/d21n4dcnza00w5s1198g532db966xp22-openroad-2026-02-17-python3-3.13.9-env
+  /nix/store/kklj5jbmmhf3cvh4jymwn485ahyzg1mw-opensta
+  /nix/store/j3zpa3jvaiyw3ix325x9ald0bs5z7m2i-opensta-dev
+  /nix/store/92s9a0sl3pjln9ws4in8fcg3b392d0yh-python3.13-cocotb-2.0.1
+  /nix/store/rqvw78llmqv42k26njgw3sp9iysvfn9z-python3.13-docopt-0.6.2
+  /nix/store/dy3w4sk9jfmmg6y2yshgdz1y7pzdvdkk-rhash-1.4.4
+  /nix/store/wl8c1s56dn566asz404bqwcl0gdrw933-verilator-5.044
+  /nix/store/f1q0w7rd0a4ny4hqvfxlhs4cmariidcy-yosys-0.62
+  /nix/store/di3jf4aj5zmd5qm8g0ydmkd1c8jw8vvh-yosys-eqy-0.62
+  /nix/store/j13yihjcj3q7m59898d25zxmvvlgn5a1-yosys-ghdl-2025-10-07
+  /nix/store/5f4l0kgczm4kn3r2rm09arby2g44fmj4-yosys-sby-0.62
+  /nix/store/07xn6zd11qvkp8h65gwycfisr3x9hk4f-yosys-slang
+  /nix/store/4bmfi4470w0i3ixcaidfki18d3fyqvva-yosys-with-plugins-0.62
+  /nix/store/vqq4mi8prw8x5rfwz7b3136rqi8v70m7-yosys-with-plugins-0.62-python3-3.13.9-env
+copying path '/nix/store/2g7r19hw2g5z871hhzam6qkc9jn8gfpl-gawk-5.3.2-man' from 'https://cache.nixos.org'...
+copying path '/nix/store/66gca2ba1a5dd2pbwh3nc2fil96nzwb8-gnumake-4.4.1-man' from 'https://cache.nixos.org'...
+copying path '/nix/store/jlv0a6iyh8vb7pfyhjj93xy245xlmgh5-gnumake-4.4.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/5cmprhlbcc69x52j4mbjqxwai215khg2-klayout-0.30.6' from 'https://nix-cache.fossi-foundation.org'...
+copying path '/nix/store/8ri0gk3jhzl9hzangslrr5x3kiykmbm7-magic-vlsi-8.3.618' from 'https://nix-cache.fossi-foundation.org'...
+copying path '/nix/store/kw3frc6fbv3zi2m9n0wv93y1nfiyjiy6-netgen-1.5.316' from 'https://nix-cache.fossi-foundation.org'...
+copying path '/nix/store/kklj5jbmmhf3cvh4jymwn485ahyzg1mw-opensta' from 'https://nix-cache.fossi-foundation.org'...
+copying path '/nix/store/wl8c1s56dn566asz404bqwcl0gdrw933-verilator-5.044' from 'https://nix-cache.fossi-foundation.org'...
+building '/nix/store/yk5sz31r5jv2gnh3xm36v14b1s2ar4rh-naked-stdenv.drv'...
+copying path '/nix/store/5f4l0kgczm4kn3r2rm09arby2g44fmj4-yosys-sby-0.62' from 'https://nix-cache.fossi-foundation.org'...
+copying path '/nix/store/f1q0w7rd0a4ny4hqvfxlhs4cmariidcy-yosys-0.62' from 'https://nix-cache.fossi-foundation.org'...
+copying path '/nix/store/i6xby5mxz12d130snflsimw8dvpvi90d-curl-8.17.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/dy3w4sk9jfmmg6y2yshgdz1y7pzdvdkk-rhash-1.4.4' from 'https://cache.nixos.org'...
+copying path '/nix/store/92s9a0sl3pjln9ws4in8fcg3b392d0yh-python3.13-cocotb-2.0.1' from 'https://nix-cache.fossi-foundation.org'...
+copying path '/nix/store/rqvw78llmqv42k26njgw3sp9iysvfn9z-python3.13-docopt-0.6.2' from 'https://cache.nixos.org'...
+building '/nix/store/yba5jkjibsl1js51rab15p0d0pbymzh8-devshell-entrypoint.drv'...
+building '/nix/store/h6sx47zazv8gchsnnskwg0rwv4784jgs-menu.drv'...
+copying path '/nix/store/w9jm660dykns6hzrdhxmqfywnc9ail8g-cmake-4.1.2' from 'https://cache.nixos.org'...
+copying path '/nix/store/j3zpa3jvaiyw3ix325x9ald0bs5z7m2i-opensta-dev' from 'https://nix-cache.fossi-foundation.org'...
+copying path '/nix/store/c4zxmi7w55jnz305yqc4407n4426zj7s-openroad-2026-02-17' from 'https://nix-cache.fossi-foundation.org'...
+copying path '/nix/store/di3jf4aj5zmd5qm8g0ydmkd1c8jw8vvh-yosys-eqy-0.62' from 'https://nix-cache.fossi-foundation.org'...
+copying path '/nix/store/j13yihjcj3q7m59898d25zxmvvlgn5a1-yosys-ghdl-2025-10-07' from 'https://nix-cache.fossi-foundation.org'...
+copying path '/nix/store/07xn6zd11qvkp8h65gwycfisr3x9hk4f-yosys-slang' from 'https://nix-cache.fossi-foundation.org'...
+copying path '/nix/store/d21n4dcnza00w5s1198g532db966xp22-openroad-2026-02-17-python3-3.13.9-env' from 'https://nix-cache.fossi-foundation.org'...
+copying path '/nix/store/4bmfi4470w0i3ixcaidfki18d3fyqvva-yosys-with-plugins-0.62' from 'https://nix-cache.fossi-foundation.org'...
+copying path '/nix/store/m80p5vq3zj2bh0q84qdcns6f35p959q9-klayout-0.30.6-python' from 'https://nix-cache.fossi-foundation.org'...
+copying path '/nix/store/vqq4mi8prw8x5rfwz7b3136rqi8v70m7-yosys-with-plugins-0.62-python3-3.13.9-env' from 'https://nix-cache.fossi-foundation.org'...
+building '/nix/store/8fglhqgl3965606nhcaj7ia9wz0hpc3q-python3.13-librelane-3.0.0rc0.drv'...
+Sourcing python-remove-tests-dir-hook
+Sourcing python-catch-conflicts-hook.sh
+Sourcing python-remove-bin-bytecode-hook.sh
+Sourcing pypa-build-hook
+Using pypaBuildPhase
+Sourcing python-runtime-deps-check-hook
+Using pythonRuntimeDepsCheckHook
+Sourcing pypa-install-hook
+Using pypaInstallPhase
+Sourcing python-imports-check-hook.sh
+Using pythonImportsCheckPhase
+Sourcing python-namespaces-hook
+Sourcing python-catch-conflicts-hook.sh
+Sourcing pytest-check-hook
+Using pytestCheckPhase
+Running phase: unpackPhase
+unpacking source archive /nix/store/xs7x1lrwj39dfa5fjl05hqv8qy11w1s3-source
+source root is source
+setting SOURCE_DATE_EPOCH to timestamp 315619200 of file "source/type_stubs/yamlcore.pyi"
+Running phase: patchPhase
+Running phase: updateAutotoolsGnuConfigScriptsPhase
+Running phase: configurePhase
+no configure script, doing nothing
+Running phase: buildPhase
+Executing pypaBuildPhase
+Creating a wheel...
+pypa build flags: --no-isolation --outdir dist/ --wheel
+* Getting build dependencies for wheel...
+* Building wheel...
+Successfully built librelane-3.0.0rc0-py3-none-any.whl
+Finished creating a wheel...
+Finished executing pypaBuildPhase
+Running phase: pythonRuntimeDepsCheckHook
+Executing pythonRuntimeDepsCheck
+Checking runtime dependencies for librelane-3.0.0rc0-py3-none-any.whl
+Finished executing pythonRuntimeDepsCheck
+Running phase: installPhase
+Executing pypaInstallPhase
+Successfully installed librelane-3.0.0rc0-py3-none-any.whl
+Finished executing pypaInstallPhase
+Running phase: pythonOutputDistPhase
+Executing pythonOutputDistPhase
+Finished executing pythonOutputDistPhase
+Running phase: fixupPhase
+shrinking RPATHs of ELF executables and libraries in /nix/store/5hayyg7rj2lanlxv2ihjwrcqrfj1rf5l-python3.13-librelane-3.0.0rc0
+checking for references to /build/ in /nix/store/5hayyg7rj2lanlxv2ihjwrcqrfj1rf5l-python3.13-librelane-3.0.0rc0...
+patching script interpreter paths in /nix/store/5hayyg7rj2lanlxv2ihjwrcqrfj1rf5l-python3.13-librelane-3.0.0rc0
+/nix/store/5hayyg7rj2lanlxv2ihjwrcqrfj1rf5l-python3.13-librelane-3.0.0rc0/lib/python3.13/site-packages/librelane/scripts/klayout/render.py: interpreter directive changed from "#!/usr/bin/env python3" to "/nix/store/jj6jldlw37r8yy9kc1smrax9dhnjm2x4-python3-3.13.9/bin/python3"
+/nix/store/5hayyg7rj2lanlxv2ihjwrcqrfj1rf5l-python3.13-librelane-3.0.0rc0/lib/python3.13/site-packages/librelane/scripts/klayout/stream_out.py: interpreter directive changed from "#!/usr/bin/env python3" to "/nix/store/jj6jldlw37r8yy9kc1smrax9dhnjm2x4-python3-3.13.9/bin/python3"
+/nix/store/5hayyg7rj2lanlxv2ihjwrcqrfj1rf5l-python3.13-librelane-3.0.0rc0/lib/python3.13/site-packages/librelane/scripts/klayout/xor.drc: interpreter directive changed from "#!/usr/bin/env ruby" to "/nix/store/0akh4i9af1sxvdn439mmx8iafac8cns5-ruby-3.3.10/bin/ruby"
+stripping (with command strip and flags -S -p) in  /nix/store/5hayyg7rj2lanlxv2ihjwrcqrfj1rf5l-python3.13-librelane-3.0.0rc0/lib /nix/store/5hayyg7rj2lanlxv2ihjwrcqrfj1rf5l-python3.13-librelane-3.0.0rc0/bin
+shrinking RPATHs of ELF executables and libraries in /nix/store/9qlcmjm25jfcgnkqkvh939qwf5zkvjys-python3.13-librelane-3.0.0rc0-dist
+checking for references to /build/ in /nix/store/9qlcmjm25jfcgnkqkvh939qwf5zkvjys-python3.13-librelane-3.0.0rc0-dist...
+patching script interpreter paths in /nix/store/9qlcmjm25jfcgnkqkvh939qwf5zkvjys-python3.13-librelane-3.0.0rc0-dist
+Rewriting #!/nix/store/jj6jldlw37r8yy9kc1smrax9dhnjm2x4-python3-3.13.9/bin/python3.13 to #!/nix/store/jj6jldlw37r8yy9kc1smrax9dhnjm2x4-python3-3.13.9
+wrapping `/nix/store/5hayyg7rj2lanlxv2ihjwrcqrfj1rf5l-python3.13-librelane-3.0.0rc0/bin/librelane.config'...
+Rewriting #!/nix/store/jj6jldlw37r8yy9kc1smrax9dhnjm2x4-python3-3.13.9/bin/python3.13 to #!/nix/store/jj6jldlw37r8yy9kc1smrax9dhnjm2x4-python3-3.13.9
+wrapping `/nix/store/5hayyg7rj2lanlxv2ihjwrcqrfj1rf5l-python3.13-librelane-3.0.0rc0/bin/librelane.state'...
+Rewriting #!/nix/store/jj6jldlw37r8yy9kc1smrax9dhnjm2x4-python3-3.13.9/bin/python3.13 to #!/nix/store/jj6jldlw37r8yy9kc1smrax9dhnjm2x4-python3-3.13.9
+wrapping `/nix/store/5hayyg7rj2lanlxv2ihjwrcqrfj1rf5l-python3.13-librelane-3.0.0rc0/bin/librelane.env_info'...
+Rewriting #!/nix/store/jj6jldlw37r8yy9kc1smrax9dhnjm2x4-python3-3.13.9/bin/python3.13 to #!/nix/store/jj6jldlw37r8yy9kc1smrax9dhnjm2x4-python3-3.13.9
+wrapping `/nix/store/5hayyg7rj2lanlxv2ihjwrcqrfj1rf5l-python3.13-librelane-3.0.0rc0/bin/librelane'...
+Rewriting #!/nix/store/jj6jldlw37r8yy9kc1smrax9dhnjm2x4-python3-3.13.9/bin/python3.13 to #!/nix/store/jj6jldlw37r8yy9kc1smrax9dhnjm2x4-python3-3.13.9
+wrapping `/nix/store/5hayyg7rj2lanlxv2ihjwrcqrfj1rf5l-python3.13-librelane-3.0.0rc0/bin/librelane.help'...
+Rewriting #!/nix/store/jj6jldlw37r8yy9kc1smrax9dhnjm2x4-python3-3.13.9/bin/python3.13 to #!/nix/store/jj6jldlw37r8yy9kc1smrax9dhnjm2x4-python3-3.13.9
+wrapping `/nix/store/5hayyg7rj2lanlxv2ihjwrcqrfj1rf5l-python3.13-librelane-3.0.0rc0/bin/librelane.steps'...
+Executing pythonRemoveTestsDir
+Finished executing pythonRemoveTestsDir
+Running phase: installCheckPhase
+no Makefile or custom installCheckPhase, doing nothing
+Running phase: pythonCatchConflictsPhase
+Running phase: pythonRemoveBinBytecodePhase
+Running phase: pythonImportsCheckPhase
+Executing pythonImportsCheckPhase
+Running phase: pytestCheckPhase
+Executing pytestCheckPhase
+pytest flags: -m pytest --numprocesses=8
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.2, pluggy-1.6.0
+rootdir: /build/source
+configfile: pyproject.toml
+plugins: xdist-3.8.0, pyfakefs-5.9.2, anyio-4.11.0
+8 workers [148 items]  m
+.........................................................s.............. [ 48%]
+...........................................................x............ [ 97%]
+....                                                                     [100%]
+================== 146 passed, 1 skipped, 1 xfailed in 4.91s ===================
+Finished executing pytestCheckPhase
+Running phase: pytestcachePhase
+Running phase: pytestRemoveBytecodePhase
+building '/nix/store/ky6qngz6m6ak608vgasc2797gawx76nv-python3-3.13.9-env.drv'...
+created 530 symlinks in user environment
+building '/nix/store/2qdp8asf7rxiqm7iwzk6j31b5f5jlvvp-devshell-env.bash.drv'...
+building '/nix/store/b6v7i697888jz9105m0rl80z2cdxbkbv-devshell-dir.drv'...
+created 1025 symlinks in user environment
+
