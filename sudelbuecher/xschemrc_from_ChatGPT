@@ -1,0 +1,50 @@
+# Project-local xschemrc for ihp-sg13cmos5l-librelane-template
+#
+# Purpose:
+# - load the IHP PDK xschem setup first
+# - then add this project's own schematic/symbol/test paths
+#
+# Assumes:
+#   PDK_ROOT and PDK are already exported by the nix shell.
+
+if {![info exists env(PDK_ROOT)]} {
+  puts stderr "ERROR: PDK_ROOT is not set."
+  return
+}
+
+if {![info exists env(PDK)]} {
+  puts stderr "ERROR: PDK is not set."
+  return
+}
+
+set pdk_xschemrc [file normalize "$env(PDK_ROOT)/$env(PDK)/libs.tech/xschem/xschemrc"]
+
+if {![file exists $pdk_xschemrc]} {
+  puts stderr "ERROR: PDK xschemrc not found: $pdk_xschemrc"
+  return
+}
+
+# Load the PDK's own xschem setup first.
+source $pdk_xschemrc
+
+# Absolute path of this project xschem directory.
+set PROJECT_XSCHEM_DIR [file dirname [info script]]
+set PROJECT_ROOT       [file normalize "$PROJECT_XSCHEM_DIR/.."]
+
+# Project-local library additions.
+# Keep these after sourcing the PDK xschemrc so the base libraries are already known.
+append XSCHEM_LIBRARY_PATH :$PROJECT_XSCHEM_DIR
+append XSCHEM_LIBRARY_PATH :[file normalize "$PROJECT_XSCHEM_DIR/symbols"]
+append XSCHEM_LIBRARY_PATH :[file normalize "$PROJECT_XSCHEM_DIR/tests"]
+
+# Useful convenience variables for scripts / launcher symbols.
+set env(PROJECT_ROOT) $PROJECT_ROOT
+set env(PROJECT_XSCHEM_DIR) $PROJECT_XSCHEM_DIR
+set env(PROJECT_SIM_DIR)    [file normalize "$PROJECT_ROOT/sim"]
+set env(PROJECT_GDS_DIR)    [file normalize "$PROJECT_ROOT/gds"]
+set env(PROJECT_KLAYOUT_DIR) [file normalize "$PROJECT_ROOT/klayout"]
+set env(PROJECT_MAGIC_DIR)   [file normalize "$PROJECT_ROOT/magic"]
+
+puts "Loaded project xschemrc: $PROJECT_XSCHEM_DIR/xschemrc"
+puts "PROJECT_ROOT=$PROJECT_ROOT"
+puts "XSCHEM_LIBRARY_PATH=$XSCHEM_LIBRARY_PATH"
