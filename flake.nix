@@ -22,10 +22,8 @@
       nix-eda = librelane.inputs.nix-eda;
       devshell = librelane.inputs.devshell;
       nixpkgs = nix-eda.inputs.nixpkgs;
-      lib = nixpkgs.lib;
     in
     {
-      # Outputs
       legacyPackages = nix-eda.forAllSystems (
         system:
         import nixpkgs {
@@ -43,18 +41,18 @@
           ];
         }
       );
-      packages = nix-eda.forAllSystems (system: {
-        inherit (self.legacyPackages.${system}.python3.pkgs) ;
-      });
+
+      packages = nix-eda.forAllSystems (
+        system: {
+          inherit (self.legacyPackages.${system}.python3.pkgs);
+        }
+      );
 
       devShells = nix-eda.forAllSystems (
         system:
         let
-          pkgs = (self.legacyPackages.${system});
-          callPackage = lib.callPackageWith pkgs;
-        in
-        {
-          default = pkgs.librelane-shell.override ({
+          pkgs = self.legacyPackages.${system};
+          baseShell = pkgs.librelane-shell.override {
             extra-packages = with pkgs; [
               # Utilities
               gnumake
@@ -64,6 +62,8 @@
               # Simulation
               iverilog
               verilator
+              ngspice
+              xschem
 
               # Waveform viewing
               gtkwave
@@ -80,7 +80,22 @@
               # For logo generation
               pillow
             ];
-          });
+          };
+        in
+        {
+          default = pkgs.mkShell {
+            inputsFrom = [ baseShell ];
+
+            shellHook = ''
+              export PDK_ROOT="$HOME/EDA/IHP-Open-PDK"
+              export PDK="ihp-sg13cmos5l"
+
+              export KLAYOUT_PATH="$HOME/.klayout:$PDK_ROOT/$PDK/libs.tech/klayout"
+              export KLAYOUT_HOME="$HOME/.klayout"
+
+              export PATH="$PDK_ROOT/$PDK/libs.tech/xschem:$PATH"
+            '';
+          };
         }
       );
     };
