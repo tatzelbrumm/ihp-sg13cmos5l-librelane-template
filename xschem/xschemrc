@@ -27,23 +27,46 @@ if {![file exists $pdk_xschemrc]} {
 # Load the PDK's own xschem setup first.
 source $pdk_xschemrc
 
-# Absolute path of this project xschem directory.
+# Absolute path of this project's xschem directory and repo root.
 set PROJECT_XSCHEM_DIR [file dirname [info script]]
 set PROJECT_ROOT       [file normalize "$PROJECT_XSCHEM_DIR/.."]
 
-# Project-local library additions.
-# Keep these after sourcing the PDK xschemrc so the base libraries are already known.
-append XSCHEM_LIBRARY_PATH :$PROJECT_XSCHEM_DIR
-append XSCHEM_LIBRARY_PATH :[file normalize "$PROJECT_XSCHEM_DIR/symbols"]
-append XSCHEM_LIBRARY_PATH :[file normalize "$PROJECT_XSCHEM_DIR/tests"]
+# Add a library path only if it is not already present.
+proc add_xschem_lib_unique {path} {
+  global XSCHEM_LIBRARY_PATH
 
-# Useful convenience variables for scripts / launcher symbols.
-set env(PROJECT_ROOT) $PROJECT_ROOT
-set env(PROJECT_XSCHEM_DIR) $PROJECT_XSCHEM_DIR
-set env(PROJECT_SIM_DIR)    [file normalize "$PROJECT_ROOT/sim"]
-set env(PROJECT_GDS_DIR)    [file normalize "$PROJECT_ROOT/gds"]
-set env(PROJECT_KLAYOUT_DIR) [file normalize "$PROJECT_ROOT/klayout"]
-set env(PROJECT_MAGIC_DIR)   [file normalize "$PROJECT_ROOT/magic"]
+  set norm [file normalize $path]
+
+  if {![info exists XSCHEM_LIBRARY_PATH] || $XSCHEM_LIBRARY_PATH eq ""} {
+    set XSCHEM_LIBRARY_PATH $norm
+    return
+  }
+
+  foreach p [split $XSCHEM_LIBRARY_PATH :] {
+    if {[file normalize $p] eq $norm} {
+      return
+    }
+  }
+
+  append XSCHEM_LIBRARY_PATH :$norm
+}
+
+# Project-local libraries.
+add_xschem_lib_unique $PROJECT_XSCHEM_DIR
+add_xschem_lib_unique "$PROJECT_XSCHEM_DIR/symbols"
+add_xschem_lib_unique "$PROJECT_XSCHEM_DIR/tests"
+
+# Convenience environment variables for scripts and launcher symbols.
+set env(PROJECT_ROOT)         $PROJECT_ROOT
+set env(PROJECT_XSCHEM_DIR)   $PROJECT_XSCHEM_DIR
+set env(PROJECT_SIM_DIR)      [file normalize "$PROJECT_ROOT/sim"]
+set env(PROJECT_NETLIST_DIR)  [file normalize "$PROJECT_ROOT/sim/netlists"]
+set env(PROJECT_RAW_DIR)      [file normalize "$PROJECT_ROOT/sim/raw"]
+set env(PROJECT_MEAS_DIR)     [file normalize "$PROJECT_ROOT/sim/meas"]
+set env(PROJECT_GDS_DIR)      [file normalize "$PROJECT_ROOT/gds"]
+set env(PROJECT_KLAYOUT_DIR)  [file normalize "$PROJECT_ROOT/klayout"]
+set env(PROJECT_MAGIC_DIR)    [file normalize "$PROJECT_ROOT/magic"]
+set env(PROJECT_LEF_DIR)      [file normalize "$PROJECT_ROOT/lef"]
 
 puts "Loaded project xschemrc: $PROJECT_XSCHEM_DIR/xschemrc"
 puts "PROJECT_ROOT=$PROJECT_ROOT"
